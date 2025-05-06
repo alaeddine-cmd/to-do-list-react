@@ -49,8 +49,8 @@ src/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/react-todo-vite.git
-cd react-todo-vite
+git clone https://github.com/alaeddine-cmd/to-do-list-react
+cd to-do-list-react
 
 ```
 
