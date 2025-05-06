@@ -145,7 +145,10 @@ input[type="checkbox"] {
     width: 100%;
     box-sizing: border-box;
   }
-
+  .checked{
+    max-width: 370px;
+    width: 100%;
+  }
   .group{
     padding: 20px;
   }
