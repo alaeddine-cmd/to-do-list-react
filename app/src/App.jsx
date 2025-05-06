@@ -1,4 +1,3 @@
-import "./App.css";
 import NavBar from "./components/NavBar";
 import ToDoList from "./components/ToDoList";
 import { ThemeProvider } from "./context/ThemeContext";
