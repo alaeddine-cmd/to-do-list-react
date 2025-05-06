@@ -17,6 +17,7 @@
 h1 {
   text-align: center;
 }
+
 .list-add {
   display: flex;
   justify-content: space-between;
@@ -42,11 +43,13 @@ h1 {
   color: var(--text-color);
   border: 1px solid var(--border-color);
 }
+
 .list-add:hover > button {
   background-color: rgb(46, 77, 0);
   transition: background-color 0.3s;
 }
-.list {
+
+.list-container {
   padding: 0px;
 }
 
@@ -54,6 +57,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .item-text {
@@ -73,67 +77,13 @@ h1 {
   margin: 10px 0;
 }
 
-/* normal controls */
 .controls {
   display: flex;
   align-items: center;
 }
-
-/* edit button */
-.edit-btn {
-  flex: 0.2;
-  padding: 5px 15px;
-  max-width: 80px;
-  width: 100%;
-  cursor: pointer;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
-}
-
-.edit-btn:hover {
-  transition: background-color 0.3s;
-  background-color: rgb(77, 77, 3);
-  color: var(--text-color);
-}
-
-/* delete button */
-
-.delete-btn {
-  flex: 0.2;
-  padding: 5px 15px;
-  max-width: 80px;
-  width: 100%;
-  cursor: pointer;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
-}
-
-.delete-btn:hover {
-  transition: background-color 0.3s;
-  background-color: rgb(78, 0, 0);
-  color: var(--text-color);
-}
-
-/* save button */
-.save-btn {
-  flex: 0.2;
-  padding: 5px 15px;
-  max-width: 80px;
-  width: 100%;
-  cursor: pointer;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
-}
-.save-btn:hover {
-  transition: background-color 0.3s;
-  background-color: rgb(46, 77, 0);
-  color: var(--text-color);
-}
-
-/* cancel button */
+.edit-btn,
+.delete-btn,
+.save-btn,
 .cancel-btn {
   flex: 0.2;
   padding: 5px 15px;
@@ -144,21 +94,37 @@ h1 {
   color: var(--text-color);
   border: 1px solid var(--border-color);
 }
+
+.edit-btn:hover,
+.delete-btn:hover,
+.save-btn:hover,
 .cancel-btn:hover {
   transition: background-color 0.3s;
-  background-color: rgb(78, 0, 0);
-  color: var(--text-color);
 }
 
+.edit-btn:hover {
+  background-color: rgb(77, 77, 3);
+}
 
-.checkbox-text{
+.delete-btn:hover {
+  background-color: rgb(78, 0, 0);
+}
+
+.save-btn:hover {
+  background-color: rgb(46, 77, 0);
+}
+
+.cancel-btn:hover {
+  background-color: rgb(78, 0, 0);
+}
+
+.checkbox-text {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
   margin-right: 10px;
 }
 
@@ -169,4 +135,52 @@ input[type="checkbox"]{
   font-size: 20px;
   padding: 0px;
   margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  
+
+  .container {
+    max-width: 370px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .group{
+    padding: 20px;
+  }
+  .list-add {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .list-add > input,
+  .list-add > button {
+    flex: unset;
+    width: 100%;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .edit-btn,
+  .delete-btn,
+  .save-btn,
+  .cancel-btn {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .item-text {
+    font-size: 18px;
+  }
 }
