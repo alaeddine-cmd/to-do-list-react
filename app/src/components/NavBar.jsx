@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "../styles/NavBar.css";
 import { ThemeContext } from "../context/ThemeContext";
 import { FaSun, FaMoon } from "react-icons/fa";
+import Logo from "../assets/to-do-logo.png";
 
 function NavBar() {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -9,8 +10,8 @@ function NavBar() {
   return (
     <div className="navbar-container">
       <div className="navbar-leftside">
-        <a id="logo" href="#home">
-          Logo
+        <a  href="#home">
+          <img src={Logo} id="logo" alt="to-do-list-logo" />
         </a>
       </div>
       <div className="navbar-rightside">
