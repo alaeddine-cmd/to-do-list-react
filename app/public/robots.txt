@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://to-do-list-react-r9ga.onrender.com/sitemap.xml
